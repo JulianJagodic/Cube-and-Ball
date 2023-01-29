@@ -21,11 +21,20 @@ public class Turning : MonoBehaviour
         Cube = GameObject.FindWithTag("Cube").GetComponent<Transform>();
         speedSlider = GameObject.Find("SpeedSlider").GetComponent<Slider>();
         distanceSlider = GameObject.Find("DistanceSlider").GetComponent<Slider>();
+        
+        Aim = new Vector3(0.0f,0.0f,0.0f);
+
+        DefaultSetting();
+    }
+
+    public void DefaultSetting(){
+
         speed = 100.0f;
         speedSlider.value = speed;
-        Aim = new Vector3(0.0f,0.0f,0.0f);
+
         Cubedistance = 2.0f;
         distanceSlider.value = Cubedistance;
+
     }
 
     // Update is called once per frame
